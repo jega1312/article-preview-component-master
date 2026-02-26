@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JS Script Link -->
+    <script src="script.js" defer></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style> -->
+  </head>
+  <body class="bg-[#ecf2f7] flex justify-center items-center h-screen">
+    <!-- Container Wrapper -->
+    <div class="max-w-2xl">
+      <!-- Main Container -->
+      <main
+        class="bg-white flex flex-col lg:flex-row rounded-lg lg:w-full shadow-2xl w-[80%] mx-auto"
+      >
+        <!-- Left Content -->
+        <div
+          class="bg-[url(/images/drawers.jpg)] w-full lg:w-2xl min-h-[11rem] sm:min-h-[20rem] lg:min-h-auto bg-cover bg-no-repeat rounded-t-lg lg:rounded-tr-none lg:rounded-l-lg"
+        ></div>
+        <!-- Right Content -->
+        <div class="flex flex-col gap-4 py-7 pl-7 pr-7 lg:pr-0">
+          <h1
+            class="font-semibold manrope-font text-sm md:text-lg lg:text-xl w-full lg:w-[87%] text-[#374151]"
+          >
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p
+            class="text-[13px] manrope-font font-medium mb-2 w-[90%] text-[#6b7280]"
+          >
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <!-- Profile Container Desktop -->
+          <div
+            class="justify-between items-center hidden lg:flex lg:pr-7 w-full"
+          >
+            <!-- Profile Box -->
+            <div class="flex gap-4">
+              <div
+                class="bg-[url(/images/avatar-michelle.jpg)] w-10 h-10 rounded-full bg-cover bg-no-repeat"
+              ></div>
+
+              <div>
+                <p class="font-bold manrope-font text-[13px] text-[#374151]">
+                  Michelle Appleton
+                </p>
+                <p class="text-[13px] manrope-font text-[#a1a9b8]">
+                  28 Jun 2020
+                </p>
+              </div>
+            </div>
+
+            <!-- Share Link -->
+
+            <div class="relative inline-block">
+              <div
+                class="w-9 h-9 bg-[#e1e8f0] hover:bg-[#6b7280] rounded-full flex justify-center items-center transition-colors duration-200 cursor-pointer group"
+                id="share-btn-desktop"
+              >
+                <img
+                  src="images/icon-share.svg"
+                  class="w-4 h-4 group-hover:[filter:brightness(0)_invert(1)] transition duration-200"
+                  alt="Share Icon"
+                />
+              </div>
+
+              <!-- Desktop PopUp -->
+              <div
+                id="share-popup-desktop"
+                class="hidden absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-[#374151] rounded-lg flex flex-col sm:flex-row items-center py-4 px-7 min-w-max z-50 shadow-lg"
+              >
+                <p
+                  class="uppercase manrope-font text-[13px] font-light text-white tracking-[0.2rem]"
+                >
+                  Share
+                </p>
+
+                <div class="flex gap-3 mt-2 sm:mt-0 sm:ml-4">
+                  <img
+                    src="images/icon-facebook.svg"
+                    alt="fb"
+                    class="size-5 hover:opacity-75 cursor-pointer"
+                  />
+                  <img
+                    src="images/icon-twitter.svg"
+                    alt="twitter"
+                    class="size-5 hover:opacity-75 cursor-pointer"
+                  />
+                  <img
+                    src="images/icon-pinterest.svg"
+                    alt="pinterest"
+                    class="size-5 hover:opacity-75 cursor-pointer"
+                  />
+                </div>
+
+                <!-- Caret pointing down -->
+                <div
+                  class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-[#374151]"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Container Mobile (Before Active )-->
+          <div
+            class="flex justify-between items-center lg:hidden w-full"
+            id="profile-container-mobile"
+          >
+            <!-- Profile Box -->
+            <div class="flex gap-4">
+              <div
+                class="bg-[url(/images/avatar-michelle.jpg)] w-10 h-10 rounded-full bg-cover bg-no-repeat"
+              ></div>
+
+              <div>
+                <p class="font-bold manrope-font text-[13px] text-[#374151]">
+                  Michelle Appleton
+                </p>
+                <p class="text-[13px] manrope-font text-[#a1a9b8]">
+                  28 Jun 2020
+                </p>
+              </div>
+            </div>
+
+            <!-- Share Link -->
+
+            <div
+              class="w-9 h-9 bg-[#e1e8f0] hover:bg-[#6b7280] rounded-full flex justify-center items-center transition-colors duration-200 cursor-pointer group"
+              id="share-btn-mobile"
+            >
+              <img
+                src="images/icon-share.svg"
+                class="w-4 h-4 group-hover:[filter:brightness(0)_invert(1)] transition duration-200"
+                alt="Share Icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Container Mobile (After Active )-->
+        <div
+          class="flex hidden justify-between items-center lg:hidden w-full bg-[#374151] rounded-b-lg py-4 px-7"
+          id="profile-container-mobile-active"
+        >
+          <!-- Profile Box -->
+          <div class="flex items-center gap-2">
+            <p
+              class="uppercase manrope-font text-[12px] font-light text-white tracking-[0.2rem]"
+            >
+              Share
+            </p>
+
+            <div class="flex items-center gap-3">
+              <img
+                src="images/icon-facebook.svg"
+                alt="fb"
+                class="size-5 hover:opacity-75 cursor-pointer"
+              />
+              <img
+                src="images/icon-twitter.svg"
+                alt="twitter"
+                class="size-5 hover:opacity-75 cursor-pointer"
+              />
+              <img
+                src="images/icon-pinterest.svg"
+                alt="pinterest"
+                class="size-5 hover:opacity-75 cursor-pointer"
+              />
+            </div>
+          </div>
+
+          <!-- Share Link -->
+
+          <div
+            class="w-9 h-9 bg-[#e1e8f0] hover:bg-[#6b7280] rounded-full flex justify-center items-center transition-colors duration-200 cursor-pointer group"
+            id="share-btn-mobile-active"
+          >
+            <img
+              src="images/icon-share.svg"
+              class="w-4 h-4 group-hover:[filter:brightness(0)_invert(1)] transition duration-200"
+              alt="Share Icon"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!--  
+    Share -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
